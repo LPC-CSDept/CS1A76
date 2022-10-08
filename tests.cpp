@@ -4,38 +4,58 @@
 #include "catch.hpp"
 #include "main.hpp"
 // tests for exercise 1
-TEST_CASE("Ex1 finduserstring()", "[example]")
+TEST_CASE("Ex1 makeNameRecord()", "[example]")
 {
-	int cstrlen, userlen, position;
-	char cstr[] = "Chocolate";
-	char userstr[100];
+	const int N = 5000;
+	string state[N];
+	string gender[N];
+	int year[N];
+	string name[N];
+	int count[N];
+	int cnt;
 
-	cstrlen = strlen(cstr);
-	userstr[0] = 'c';
-	userstr[1] = 'o';
-	userstr[2] = 'l';
-	userstr[3] = '\0';
-	userlen = strlen(userstr);
-
-	position = finduserstring(cstr, cstrlen, userstr, userlen);
+	cnt = makeNameRecord(state, gender, year, name, count);
 	cout << "****************************************\n";
-	REQUIRE(position == 3);
+	INFO("the number of lines in file is incorrect " << cnt);
+	REQUIRE(cnt == 4080);
 }
 // tests for exercise 2
-TEST_CASE("Ex2 deleteone()", "[example]")
+TEST_CASE("Ex2 findNames()", "[example]")
 {
-	int cstrlen, userlen, position;
-	char cstr[] = "C++ Programming";
-	char userstr[100];
+	const int N = 5000;
+	string state[N];
+	string gender[N];
+	int year[N];
+	string name[N];
+	int count[N];
+	int cnt;
+	char starting = 'S';
+	string stname = "CA";
 
-	cstrlen = strlen(cstr);
-	userstr[0] = 'r';
-	userstr[1] = 'a';
-	userstr[2] = 'm';
-	userstr[3] = '\0';
-	userlen = strlen(userstr);
-
-	position = finduserstring(cstr, cstrlen, userstr, userlen);
+	cnt = makeNameRecord(state, gender, year, name, count);
 	cout << "****************************************\n";
-	REQUIRE(position == 8);
+	cnt = findNames(cnt, state, gender, year, name, count, starting, stname);
+
+	INFO("the number of lines in file is incorrect " << cnt);
+	REQUIRE(cnt == 11);
+}
+// tests for exercise 3
+TEST_CASE("Ex3 findNames()", "[example]")
+{
+	const int N = 5000;
+	string state[N];
+	string gender[N];
+	int year[N];
+	string name[N];
+	int count[N];
+	int cnt;
+	char starting = 'J';
+	string stname = "TX";
+
+	cnt = makeNameRecord(state, gender, year, name, count);
+	cout << "****************************************\n";
+	cnt = findNames(cnt, state, gender, year, name, count, starting, stname);
+
+	INFO("the number of lines in file is incorrect " << cnt);
+	REQUIRE(cnt == 10);
 }

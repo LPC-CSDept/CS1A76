@@ -5,25 +5,27 @@
 
 ---
 
+### Assignment A7-6: Lab 7-8
+
 ### Open the "main.hpp"
 
 > Complete functions
 
 ### Goal of this lab
 
-- Determine the c-string “cstr” includes the substring “userstr”.
-- - C-string: string values in a character array
-- - string: string values in string data type
-- - All character strings should be stored in the character array, not a string in this Lab.
+- - Lab 7-8:
+- - In this programming lab, we are going to read all lines from the file “babynames.txt”
+- - The file “babynames.txt” has 4080 lines and each line consists of 5 fields, State name, Gender, Year, Name, The number referenced.
+- - The Lab 7-8 program reads from all lines and then constructs the arrays to store all lines as follows.
 
 ### Input and Output
 
-- Input: string value (c-string)
-  Output: index of the original c-string if found, If not found, -1
+- Input: None
+  Output: Print the names in CA starting with 'A'
 
 ### 👓 Watch:
 
-- [Processing Array Contents Lab 7-7. (3 mins)](https://youtu.be/UdGoPIiDD18)
+- [Array as Function Arguments Lab 7-8. (9 mins)](https://youtu.be/62chBGoql_Q)
 
 ## You can test your program by typing the command
 
