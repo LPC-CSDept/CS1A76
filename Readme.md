@@ -20,8 +20,8 @@
 
 ### Input and Output
 
-- Input: None
-  Output: Print the names in CA starting with 'A'
+- Input: None <br>
+-  Output: Print the names in "state name" starting with '*'
 
 ### 👓 Watch:
 
